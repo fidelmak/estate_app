@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //import 'categories.dart';
+import 'estate/screens/splash/homepage.dart';
 import 'practise/categories.dart';
 
 final theme = ThemeData(
@@ -23,6 +24,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: theme, home: const CategoriesScreen());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const home()); //const CategoriesScreen());
   }
 }
