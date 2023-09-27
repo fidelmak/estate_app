@@ -10,8 +10,22 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("welcome"),
-    );
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+    return ListView(children: [
+      Container(
+          width: screenWidth * 3,
+          height: screenHeight * 0.7,
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 2.0,
+            ),
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          child: Image.asset(
+            'assets/images/img1.jpeg',
+            fit: BoxFit.cover,
+          )),
+    ]);
   }
 }
