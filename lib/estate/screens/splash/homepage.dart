@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants/colors.dart';
+import '../../routes/routes.dart';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -16,9 +17,6 @@ class _homeState extends State<home> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         backgroundColor: EstateColors.primary,
-        // appBar: AppBar(
-        //   title: Text('Dartinterview'),
-        // ),
         body: SafeArea(
             child: Center(
           child: Column(
@@ -58,7 +56,7 @@ class _homeState extends State<home> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/interview');
+                              Navigator.pushNamed(context, '/welcome');
                             },
                             child: Icon(
                               Icons.arrow_forward_ios,

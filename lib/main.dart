@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'estate/routes/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //import 'categories.dart';
@@ -26,6 +26,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
+        routes: routes,
         home: const home()); //const CategoriesScreen());
   }
 }
