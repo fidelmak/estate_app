@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../screens/splash/homepage.dart';
+import '../screens/unboarding/OnboardOne.dart';
 import '../screens/welcome/welcome.dart';
 
 Map<String, WidgetBuilder> routes = {
   '/home': (BuildContext context) => const home(),
-  '/welcome': (BuildContext context) => const Welcome()
+  '/welcome': (BuildContext context) => const Welcome(),
+  '/onboard_one': (BuildContext context) => const OnboardOne(),
 };

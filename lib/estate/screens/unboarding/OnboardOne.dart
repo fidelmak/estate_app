@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 import 'package:rich_text_widget/rich_text_widget.dart';
 
-class Welcome extends StatefulWidget {
-  const Welcome({super.key});
+class OnboardOne extends StatefulWidget {
+  const OnboardOne({super.key});
 
   @override
-  State<Welcome> createState() => _WelcomeState();
+  State<OnboardOne> createState() => _OnboardOneState();
 }
 
-class _WelcomeState extends State<Welcome> {
+class _OnboardOneState extends State<OnboardOne> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -20,6 +20,13 @@ class _WelcomeState extends State<Welcome> {
       child: Container(
         color: EstateColors.secondary,
         child: ListView(children: [
+          Align(
+            alignment: Alignment.centerRight, // Align text to the left
+            child: Text(
+              'Skip',
+              style: TextStyle(color: EstateColors.primary, fontSize: 20),
+            ), // Button text
+          ),
           Container(
               width: screenWidth * 3,
               height: screenHeight * 0.7,
