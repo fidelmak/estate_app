@@ -34,7 +34,7 @@ class _OnboardOneState extends State<OnboardOne> {
                 borderRadius: BorderRadius.circular(0.0),
               ),
               child: Image.asset(
-                'assets/images/img2.png',
+                'assets/images/search2.jpeg',
                 fit: BoxFit.contain,
               )),
           SizedBox(height: 2),
@@ -73,7 +73,7 @@ class _OnboardOneState extends State<OnboardOne> {
                             ),
                           ),
                           TextSpan(
-                            text: ' and Find your\nPerfect Dream ',
+                            text: ' listed \n Homes ',
                             style: TextStyle(
                               color: Colors.black, // Blue color for "House"
                               fontSize: 20,
@@ -92,7 +92,7 @@ class _OnboardOneState extends State<OnboardOne> {
                     )),
                     SizedBox(height: 35),
                     Text(
-                      "App to search and Discover the most suitable \nplace for you to stay",
+                      "Discover more houses  \n for rent ",
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 30),
@@ -118,11 +118,11 @@ class _OnboardOneState extends State<OnboardOne> {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: 'Already have an account? ',
+                            text: 'wanna explore ? ',
                             style: TextStyle(color: Colors.black),
                           ),
                           TextSpan(
-                            text: 'Sign in',
+                            text: 'search more details ',
                             style: TextStyle(
                               color: Colors.blue,
                               decoration: TextDecoration.underline,
