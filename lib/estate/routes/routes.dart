@@ -9,5 +9,5 @@ Map<String, WidgetBuilder> routes = {
   '/home': (BuildContext context) => const home(),
   '/welcome': (BuildContext context) => const Welcome(),
   '/onboard_one': (BuildContext context) => const OnboardOne(),
-  '/house': (BuildContext context) => const CategoriesScreen(),
+  '/house': (BuildContext context) => CategoriesScreen(),
 };
