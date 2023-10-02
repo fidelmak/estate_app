@@ -1,0 +1,58 @@
+{
+  "company_name": "Dream Homes Realty",
+  "website": "https://www.dreamhomesrealty.com",
+  "contact_email": "info@dreamhomesrealty.com",
+  "contact_phone": "+1 (123) 456-7890",
+  "address": {
+    "street": "123 Main Street",
+    "city": "Your City",
+    "state": "Your State",
+    "zip_code": "12345"
+  },
+  "listing_categories": [
+    {
+      "category_name": "Residential",
+      "description": "Single-family homes, condos, and apartments for sale or rent.",
+      "featured_listings": [
+        {
+          "listing_id": "DH12345",
+          "title": "Luxury Villa with Ocean View",
+          "price": "$1,200,000",
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "sqft": 3500,
+          "image_url": "assets/house/h1.jpeg"
+        },
+        {
+          "listing_id": "DH67890",
+          "title": "Cozy Apartment in the Heart of the City",
+          "price": "$300,000",
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "sqft": 1200,
+          "image_url": "assets/house/h1.jpeg"
+        }
+      ]
+    },
+    {
+      "category_name": "Commercial",
+      "description": "Office spaces, retail properties, and industrial properties for sale or lease.",
+      "featured_listings": [
+        {
+          "listing_id": "DH54321",
+          "title": "Prime Office Space in Business District",
+          "price": "$500,000",
+          "available_for": "Sale",
+          "image_url": "assets/house/h1.jpeg"
+        },
+        {
+          "listing_id": "DH98765",
+          "title": "Retail Storefront on Main Street",
+          "price": "$750,000",
+          "available_for": "Lease",
+          "image_url": "assets/house/h1.jpeg"
+        }
+      ]
+    }
+  ]
+}

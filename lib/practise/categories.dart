@@ -7,21 +7,24 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Pick your Category'),
+          title: const Text('house list'),
         ),
-        body: GridView(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 3 / 2,
-                crossAxisSpacing: 20,
-                mainAxisSpacing: 20),
-            children: const [
-              Text('1'),
-              Text('2'),
-              Text('3'),
-              Text("4"),
-              Text("5"),
-              Text("6")
-            ]));
+        body: Container(
+          margin: EdgeInsets.all(30),
+          child: GridView(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 3 / 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20),
+              children: const [
+                Text('house 1'),
+                Text('house 2'),
+                Text('house 3'),
+                Text("house 4"),
+                Text("house 5"),
+                Text("house 6")
+              ]),
+        ));
   }
 }

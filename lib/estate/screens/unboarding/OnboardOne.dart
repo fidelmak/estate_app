@@ -1,8 +1,12 @@
+import 'package:estate_app/estate/model/api.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../../practise/categories.dart';
 import '../../constants/colors.dart';
 import 'package:rich_text_widget/rich_text_widget.dart';
+
+import '../../widgets/loadingWidget.dart';
 
 class OnboardOne extends StatefulWidget {
   const OnboardOne({super.key});
@@ -18,13 +22,13 @@ class _OnboardOneState extends State<OnboardOne> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Material(
       child: Container(
-        color: EstateColors.secondary,
+        color: Colors.white,
         child: ListView(children: [
           Align(
             alignment: Alignment.centerRight, // Align text to the left
             child: Text(
               'Skip',
-              style: TextStyle(color: EstateColors.primary, fontSize: 20),
+              style: TextStyle(color: Colors.black, fontSize: 10),
             ), // Button text
           ),
           Container(
@@ -34,7 +38,7 @@ class _OnboardOneState extends State<OnboardOne> {
                 borderRadius: BorderRadius.circular(0.0),
               ),
               child: Image.asset(
-                'assets/images/search2.jpeg',
+                'assets/images/search2.png',
                 fit: BoxFit.contain,
               )),
           SizedBox(height: 2),
@@ -65,25 +69,26 @@ class _OnboardOneState extends State<OnboardOne> {
                         ),
                         children: <TextSpan>[
                           TextSpan(
-                            text: 'Discover',
+                            text: 'Find ',
                             style: TextStyle(
                               color: EstateColors
-                                  .primary, // Blue color for "Discover"
+                                  .icox, // Blue color for "Discover"
                               fontSize: 20,
                             ),
                           ),
                           TextSpan(
-                            text: ' listed \n Homes ',
+                            text: ' Your Perfect Home \n  ',
                             style: TextStyle(
-                              color: Colors.black, // Blue color for "House"
+                              color: EstateColors
+                                  .primary, // Blue color for "House"
                               fontSize: 20,
                             ),
                           ),
                           TextSpan(
-                            text: ' House ',
+                            text: 'with Us Today ',
                             style: TextStyle(
                               color: EstateColors
-                                  .primary, // Blue color for "Discover"
+                                  .icox, // Blue color for "Discover"
                               fontSize: 20,
                             ),
                           ),
@@ -92,7 +97,7 @@ class _OnboardOneState extends State<OnboardOne> {
                     )),
                     SizedBox(height: 35),
                     Text(
-                      "Discover more houses  \n for rent ",
+                      "lorem ipsum ipsum dollor sit lorem ipsum ipsum dollor sit  \n lorem ipsum orem ipsum ipsum dollor sit ",
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 30),
@@ -109,9 +114,11 @@ class _OnboardOneState extends State<OnboardOne> {
                                 200.0, 48.0), // Width and height of the button
                           ),
                           onPressed: () {
-                            Navigator.pushNamed(context, '/onboard_one');
+                            onTapStartCustomLoadingProgressBtn(context);
+
+                            loadNextScreen(context);
                           },
-                          child: Text("Let's Get Started")),
+                          child: Text("Load Spaces")),
                     ),
                     SizedBox(height: 20),
                     RichText(
@@ -142,5 +149,13 @@ class _OnboardOneState extends State<OnboardOne> {
         ]),
       ),
     );
+  }
+
+  Future<Null> loadNextScreen(BuildContext context) {
+    return Future.delayed(Duration(seconds: 3), () {
+      // Execute this code after 3 seconds
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => CategoriesScreen()));
+    });
   }
 }

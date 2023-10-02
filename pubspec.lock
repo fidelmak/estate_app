@@ -123,6 +123,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  loading_indicator:
+    dependency: "direct main"
+    description:
+      name: loading_indicator
+      sha256: a101ffb2aa3e646137d7810bfa90b50525dd3f72c01235b6df7491cf6af6f284
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.1"
+  loading_progress:
+    dependency: "direct main"
+    description:
+      name: loading_progress
+      sha256: bfe1fac950864dfe088b6b4e2872db69f3a06cbcbba6cf5f749415c66f13ca2c
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   matcher:
     dependency: transitive
     description:
