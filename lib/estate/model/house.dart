@@ -14,8 +14,8 @@ class Houses {
   factory Houses.fromJson(Map<String, dynamic> json) {
     return Houses(
       street: json['street'],
-      city: json['city'],
-      state: json['state'],
+      city: json['city'].toString(),
+      state: json['state'].toString(),
       zipCode: json['zip_code'],
     );
   }

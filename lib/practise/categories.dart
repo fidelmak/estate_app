@@ -1,52 +1,69 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-import '../estate/model/api.dart';
-import '../estate/model/house.dart';
-
-class CategoriesScreen extends StatelessWidget {
-  //late Future<Houses> futureHouses;
-  Future<Houses> futureHouses = fetchHouse();
+class CategoriesScreen extends StatefulWidget {
   @override
-  void initState() {
-    //futureHouses = fetchHouse();
+  State<CategoriesScreen> createState() => _CategoriesScreenState();
+}
+
+class _CategoriesScreenState extends State<CategoriesScreen> {
+  List<Map<String, dynamic>> House = [];
+
+  Future<void> fetchHouse() async {
+    try {
+      final jsonString = await rootBundle.loadString('assets/house.json');
+      final data = jsonDecode(jsonString);
+
+      setState(() {
+        House = List<Map<String, dynamic>>.from(data['House']);
+      });
+    } catch (e) {
+      print('Error loading JSON data: $e');
+    }
   }
 
+  @override
+  void initState() {
+    fetchHouse();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('house list'),
-        ),
-        body: Center(
-          child: FutureBuilder<Houses>(
-            future: futureHouses,
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return Text(snapshot.data!.city);
-              } else if (snapshot.hasError) {
-                return Text('${snapshot.error}');
-              }
+      appBar: AppBar(
+        title: const Text('House List'),
+      ),
+      body: House.isNotEmpty
+          ? GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, // Number of columns in the grid.
+                crossAxisSpacing: 16.0, // Horizontal spacing between items.
+                mainAxisSpacing: 16.0, // Vertical spacing between items.
+              ),
 
-              // By default, show a loading spinner.
-              return const CircularProgressIndicator();
-            },
-          ),
-        ));
-    // body: Container(
-    //   child: GridView(
-    //       padding: EdgeInsets.all(24),
-    //       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-    //           crossAxisCount: 2,
-    //           childAspectRatio: 3 / 2,
-    //           crossAxisSpacing: 20,
-    //           mainAxisSpacing: 20),
-    //       children: const [
-    //         Text('house 1'),
-    //         Text('house 2'),
-    //         Text('house 3'),
-    //         Text("house 4"),
-    //         Text("house 5"),
-    //         Text("house 6")
-    //       ]),
-    // ));
+              itemBuilder: (BuildContext context, int index) {
+                return Center(
+                  child: Card(
+                    key: ValueKey(House[index]["id"]),
+                    margin: const EdgeInsets.all(18),
+                    color: Colors.amber.shade100,
+                    child: ListTile(
+                      leading: Text(House[index]["id"]),
+                      title: Text(House[index]['title']),
+                    ),
+                  ),
+                );
+              },
+              itemCount: House.length, // Total number of items in the grid.
+            )
+          : Center(
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text("Empty"),
+              ),
+            ),
+    );
   }
 }

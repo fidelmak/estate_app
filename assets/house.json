@@ -1,0 +1,32 @@
+{
+  "House": [
+    {
+      "id": "DH54321",
+      "title": "Prime Office Space in Business District",
+      "price": "$500,000",
+      "available_for": "Sale",
+      "image_url": "assets/house/h1.jpeg"
+    },
+    {
+      "id": "DH98765",
+      "title": "Retail Storefront on Main Street",
+      "price": "$750,000",
+      "available_for": "Lease",
+      "image_url": "assets/house/h1.jpeg"
+    },
+    {
+      "id": "DH98765",
+      "title": "Retail Storefront on Main Street",
+      "price": "$750,000",
+      "available_for": "Lease",
+      "image_url": "assets/house/h1.jpeg"
+    },
+    {
+      "id": "DH98765",
+      "title": "Retail Storefront on Main Street",
+      "price": "$750,000",
+      "available_for": "Lease",
+      "image_url": "assets/house/h1.jpeg"
+    }
+  ]
+}

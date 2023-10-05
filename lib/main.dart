@@ -1,3 +1,4 @@
+import 'package:estate_app/estate/screens/welcome/welcome.dart';
 import 'package:flutter/material.dart';
 import 'estate/routes/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,6 +28,6 @@ class App extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: routes,
-        home: const home()); //const CategoriesScreen());
+        home: const Home()); //home()); //const CategoriesScreen());
   }
 }
