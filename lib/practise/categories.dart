@@ -31,32 +31,38 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         title: const Text('House List'),
       ),
       body: House.isNotEmpty
-          ? GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, // Number of columns in the grid.
-                crossAxisSpacing: 16.0, // Horizontal spacing between items.
-                mainAxisSpacing: 16.0, // Vertical spacing between items.
-              ),
+          ? Center(
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // Number of columns in the grid.
+                  crossAxisSpacing: 8.0, // Horizontal spacing between items.
+                  mainAxisSpacing: 8.0, // Vertical spacing between items.
+                ),
 
-              itemBuilder: (BuildContext context, int index) {
-                return Center(
-                  child: Card(
-                    key: ValueKey(House[index]["id"]),
-                    margin: const EdgeInsets.all(18),
-                    color: Colors.amber.shade100,
-                    child: ListTile(
-                      leading: Text(House[index]["id"]),
-                      title: Text(House[index]['title']),
+                itemBuilder: (BuildContext context, int index) {
+                  return Center(
+                    child: Container(
+                      width: screenWidth * 0.5,
+                      height: screenHeight * 0.5,
+                      key: ValueKey(House[index]["id"]),
+                      margin: const EdgeInsets.all(10),
+                      color: Colors.amber.shade100,
+                      child: ListTile(
+                        leading: Text(House[index]["id"]),
+                        title: Text(House[index]['title']),
+                      ),
                     ),
-                  ),
-                );
-              },
-              itemCount: House.length, // Total number of items in the grid.
+                  );
+                },
+                itemCount: House.length, // Total number of items in the grid.
+              ),
             )
           : Center(
               child: ElevatedButton(
