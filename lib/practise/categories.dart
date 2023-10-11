@@ -38,7 +38,8 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         title: const Text('House List'),
       ),
       body: House.isNotEmpty
-          ? Center(
+          ? Padding(
+              padding: const EdgeInsets.all(36.0),
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2, // Number of columns in the grid.
@@ -47,9 +48,10 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 ),
 
                 itemBuilder: (BuildContext context, int index) {
-                  return Center(
+                  return Padding(
+                    padding: const EdgeInsets.all(12),
                     child: Container(
-                      width: screenWidth * 0.5,
+                      width: screenWidth * 0.2,
                       height: screenHeight * 0.5,
                       key: ValueKey(House[index]["id"]),
                       margin: const EdgeInsets.all(10),
