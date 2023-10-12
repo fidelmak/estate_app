@@ -6,8 +6,10 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'categories.dart';
 import 'estate/screens/splash/homepage.dart';
 import 'practise/categories.dart';
+import 'practise/intro_app.dart';
 
 final theme = ThemeData(
+  primaryColor: Colors.black,
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
     brightness: Brightness.dark,
@@ -28,6 +30,8 @@ class App extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: routes,
-        home: const Home()); //home()); //const CategoriesScreen());
+        theme: theme,
+        home:
+            const Estate()); //Home()); //home()); //const CategoriesScreen());
   }
 }
