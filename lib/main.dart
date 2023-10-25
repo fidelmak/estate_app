@@ -1,12 +1,14 @@
 import 'package:estate_app/estate/screens/welcome/welcome.dart';
+import 'package:estate_app/practise/data/dummy.dart';
 import 'package:flutter/material.dart';
 import 'estate/routes/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //import 'categories.dart';
 import 'estate/screens/splash/homepage.dart';
+import 'practise/SCREENS/meals.dart';
 import 'practise/categories.dart';
-import 'practise/intro_app.dart';
+import 'practise/SCREENS/intro_app.dart';
 
 final theme = ThemeData(
   primaryColor: Colors.black,
@@ -31,7 +33,9 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: routes,
         theme: theme,
-        home:
-            const Estate()); //Home()); //home()); //const CategoriesScreen());
+        home: const MealsScreen(
+          title: 'amala',
+          meals: dummyMeals,
+        )); //const Estate()); //Home()); //home()); //const CategoriesScreen());
   }
 }

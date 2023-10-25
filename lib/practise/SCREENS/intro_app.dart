@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'data/dummy.dart';
-import 'widget/category_grid.dart';
+import '../data/dummy.dart';
+import '../widget/category_grid.dart';
 
 class Estate extends StatefulWidget {
   const Estate({super.key});
@@ -20,6 +20,7 @@ class _EstateState extends State<Estate> {
       backgroundColor: theme.primaryColor,
       appBar: AppBar(title: Text("Pick your Category")),
       body: GridView(
+        padding: EdgeInsets.all(24),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 3 / 2,
