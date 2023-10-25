@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'data/dummy.dart';
+import 'widget/category_grid.dart';
+
 class Estate extends StatefulWidget {
   const Estate({super.key});
 
@@ -22,31 +25,9 @@ class _EstateState extends State<Estate> {
             childAspectRatio: 3 / 2,
             crossAxisSpacing: 20,
             mainAxisSpacing: 20),
-        children: const [
-          Text(
-            "1",
-            style: TextStyle(color: Colors.white),
-          ),
-          Text(
-            "2",
-            style: TextStyle(color: Colors.white),
-          ),
-          Text(
-            "3",
-            style: TextStyle(color: Colors.white),
-          ),
-          Text(
-            "4",
-            style: TextStyle(color: Colors.white),
-          ),
-          Text(
-            "5",
-            style: TextStyle(color: Colors.white),
-          ),
-          Text(
-            "6",
-            style: TextStyle(color: Colors.white),
-          )
+        children: [
+          for (final category in availableCat)
+            CategoryWidget(category: category)
         ],
       ),
     ));

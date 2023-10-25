@@ -9,6 +9,7 @@ class CategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
           category.color.withOpacity(0.55),
@@ -19,7 +20,7 @@ class CategoryWidget extends StatelessWidget {
         category.title,
         style: Theme.of(context)
             .textTheme
-            .titleLarge
+            .titleLarge!
             .copyWith(color: Theme.of(context).colorScheme.onBackground),
       ),
     );
