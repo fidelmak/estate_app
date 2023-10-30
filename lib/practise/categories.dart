@@ -3,6 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CategoriesScreen extends StatefulWidget {
+
+void _selectCategory(){
+  
+}
+
+
+
+
   @override
   State<CategoriesScreen> createState() => _CategoriesScreenState();
 }

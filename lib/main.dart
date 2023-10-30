@@ -33,9 +33,7 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: routes,
         theme: theme,
-        home: const MealsScreen(
-          title: 'amala',
-          meals: dummyMeals,
-        )); //const Estate()); //Home()); //home()); //const CategoriesScreen());
+        home:
+            const Estate()); //Home()); //home()); //const CategoriesScreen());
   }
 }

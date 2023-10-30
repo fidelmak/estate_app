@@ -3,13 +3,18 @@ import 'package:flutter/material.dart';
 import '../model/myCategory.dart';
 
 class CategoryWidget extends StatelessWidget {
-  const CategoryWidget({super.key, required this.category});
+  final Function onSelectCategory;
   final Category category;
+
+  const CategoryWidget(
+      {super.key, required this.category, required this.onSelectCategory});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        onSelectCategory();
+      },
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(18),
       child: Container(

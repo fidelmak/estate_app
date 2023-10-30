@@ -1,16 +1,16 @@
+import 'package:estate_app/practise/SCREENS/meals.dart';
 import 'package:flutter/material.dart';
 
 import '../data/dummy.dart';
 import '../widget/category_grid.dart';
 
-class Estate extends StatefulWidget {
+class Estate extends StatelessWidget {
   const Estate({super.key});
+  void _selectCategory(BuildContext, context) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (ctx) => MealsScreen(title: "some title ", meals: [])));
+  }
 
-  @override
-  State<Estate> createState() => _EstateState();
-}
-
-class _EstateState extends State<Estate> {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
@@ -28,7 +28,10 @@ class _EstateState extends State<Estate> {
             mainAxisSpacing: 20),
         children: [
           for (final category in availableCat)
-            CategoryWidget(category: category)
+            CategoryWidget(
+              category: category,
+              onSelectCategory: () => _selectCategory(BuildContext, context),
+            )
         ],
       ),
     ));
