@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../practise/categories.dart';
+import '../screens/house_list/categories.dart';
 import '../screens/splash/homepage.dart';
 import '../screens/unboarding/OnboardOne.dart';
 import '../screens/welcome/welcome.dart';

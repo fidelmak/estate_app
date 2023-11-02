@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'categories.dart';
 import 'estate/screens/splash/homepage.dart';
 import 'practise/SCREENS/meals.dart';
-import 'practise/categories.dart';
+import 'estate/screens/house_list/categories.dart';
 import 'practise/SCREENS/intro_app.dart';
 
 final theme = ThemeData(
@@ -34,6 +34,6 @@ class App extends StatelessWidget {
         routes: routes,
         theme: theme,
         home:
-            const Estate()); //Home()); //home()); //const CategoriesScreen());
+            Home()); //const Estate()); //Home()); //home()); //const CategoriesScreen());
   }
 }

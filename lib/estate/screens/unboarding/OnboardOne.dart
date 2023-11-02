@@ -2,7 +2,7 @@ import 'package:estate_app/estate/model/api.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../practise/categories.dart';
+import '../house_list/categories.dart';
 import '../../constants/colors.dart';
 import 'package:rich_text_widget/rich_text_widget.dart';
 
