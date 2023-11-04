@@ -123,8 +123,7 @@ class _OnboardOneState extends State<OnboardOne> {
                           child: Text("Load Spaces",
                               style: TextStyle(color: Colors.white))),
                     ),
-                    SizedBox(height: 20),
-                    SizedBox(height: 20),
+                    SizedBox(height: 50),
                     RichText(
                       text: TextSpan(
                         children: [

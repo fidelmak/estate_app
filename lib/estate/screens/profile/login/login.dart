@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widgets/big_button.dart';
@@ -84,7 +85,11 @@ class _LoginState extends State<Login> {
               color: Colors.black.withOpacity(0.5),
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(
                 onTap: () {
@@ -92,8 +97,8 @@ class _LoginState extends State<Login> {
                   // You can navigate to a new screen or perform some action here
                 },
                 child: Container(
-                  width: 100,
-                  height: 100,
+                  width: 30,
+                  height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
@@ -104,13 +109,14 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
+              SizedBox(width: 5),
               InkWell(
                 onTap: () {
                   // Handle the click for the second image
                 },
                 child: Container(
-                  width: 100,
-                  height: 100,
+                  width: 30,
+                  height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
@@ -121,13 +127,14 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
+              SizedBox(width: 5),
               InkWell(
                 onTap: () {
                   // Handle the click for the third image
                 },
                 child: Container(
-                  width: 100,
-                  height: 100,
+                  width: 30,
+                  height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
@@ -140,6 +147,29 @@ class _LoginState extends State<Login> {
               ),
             ],
           ),
+          SizedBox(height: 50),
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: "Don't have an account ? ",
+                  style: TextStyle(color: Colors.black),
+                ),
+                TextSpan(
+                  text: 'sign-up ',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      print('Sign in');
+                      // Add your navigation logic here or perform any other action.
+                    },
+                ),
+              ],
+            ),
+          )
         ]),
       ),
     );
