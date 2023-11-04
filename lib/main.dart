@@ -5,6 +5,7 @@ import 'estate/routes/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //import 'categories.dart';
+import 'estate/screens/profile/login/login.dart';
 import 'estate/screens/splash/homepage.dart';
 import 'practise/SCREENS/meals.dart';
 import 'estate/screens/house_list/categories.dart';
@@ -34,6 +35,6 @@ class App extends StatelessWidget {
         routes: routes,
         theme: theme,
         home:
-            Home()); //const Estate()); //Home()); //home()); //const CategoriesScreen());
+            Home()); //Home()); //const Estate()); //Home()); //home()); //const CategoriesScreen());
   }
 }

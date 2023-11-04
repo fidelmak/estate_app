@@ -42,32 +42,11 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
       body: House.isNotEmpty
           ? Padding(
               padding: const EdgeInsets.all(36.0),
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, // Number of columns in the grid.
-                  crossAxisSpacing: 8.0, // Horizontal spacing between items.
-                  mainAxisSpacing: 8.0, // Vertical spacing between items.
-                ),
-
-                itemBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: Container(
-                      width: screenWidth * 0.2,
-                      height: screenHeight * 0.5,
-                      key: ValueKey(House[index]["id"]),
-                      margin: const EdgeInsets.all(10),
-                      color: Colors.amber.shade100,
-                      child: ListTile(
-                        leading: Text(House[index]["id"]),
-                        title: Text(House[index]['title']),
-                      ),
-                    ),
-                  );
-                },
-                itemCount: House.length, // Total number of items in the grid.
-              ),
-            )
+              child: Column(children: [
+                Container(
+                  child: Text("hi"),
+                )
+              ]))
           : Center(
               child: ElevatedButton(
                 onPressed: () {},

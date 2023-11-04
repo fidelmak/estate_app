@@ -2,11 +2,13 @@ import 'package:estate_app/estate/model/api.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/big_button.dart';
 import '../house_list/categories.dart';
 import '../../constants/colors.dart';
 import 'package:rich_text_widget/rich_text_widget.dart';
 
 import '../../widgets/loadingWidget.dart';
+import '../profile/login/login.dart';
 
 class OnboardOne extends StatefulWidget {
   const OnboardOne({super.key});
@@ -105,7 +107,7 @@ class _OnboardOneState extends State<OnboardOne> {
                       width: screenWidth * 0.6,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: EstateColors.primary, // Button color
+                            primary: EstateColors.icox, // Button color
                             shape: RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.circular(50.0), // Border radius
@@ -118,8 +120,10 @@ class _OnboardOneState extends State<OnboardOne> {
 
                             loadNextScreen(context);
                           },
-                          child: Text("Load Spaces")),
+                          child: Text("Load Spaces",
+                              style: TextStyle(color: Colors.white))),
                     ),
+                    SizedBox(height: 20),
                     SizedBox(height: 20),
                     RichText(
                       text: TextSpan(
@@ -154,8 +158,7 @@ class _OnboardOneState extends State<OnboardOne> {
   Future<Null> loadNextScreen(BuildContext context) {
     return Future.delayed(Duration(seconds: 3), () {
       // Execute this code after 3 seconds
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => CategoriesScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
     });
   }
 }

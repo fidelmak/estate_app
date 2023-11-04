@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 import 'package:rich_text_widget/rich_text_widget.dart';
 
+import '../../widgets/big_button.dart';
+import '../../widgets/special_button.dart';
+
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
 
@@ -89,23 +92,7 @@ class _WelcomeState extends State<Welcome> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 30),
-                    Container(
-                      width: screenWidth * 0.6,
-                      child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            primary: EstateColors.primary, // Button color
-                            shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.circular(50.0), // Border radius
-                            ),
-                            minimumSize: Size(
-                                200.0, 48.0), // Width and height of the button
-                          ),
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/onboard_one');
-                          },
-                          child: Text("Let's Get Started")),
-                    ),
+                    SpecialBtn(screenWidth: screenWidth),
                     SizedBox(height: 20),
                     RichText(
                       text: TextSpan(
@@ -128,7 +115,7 @@ class _WelcomeState extends State<Welcome> {
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ])),
