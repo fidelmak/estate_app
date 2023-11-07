@@ -31,7 +31,7 @@ class _SignUpState extends State<SignUp> {
             ),
           ),
           const Text(
-            "Fill your infomation below or register with your social account",
+            "Fill your infomation below or register \n with your social account",
             style: TextStyle(fontSize: 15, color: Color(0xD89E9E9E)),
           ),
           const SizedBox(
@@ -43,7 +43,7 @@ class _SignUpState extends State<SignUp> {
             obscureText: false,
           ),
           const SizedBox(
-            height: 30,
+            height: 10,
           ),
           const KtextField(
             littleLabel: 'Email',
