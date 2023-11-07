@@ -4,17 +4,16 @@ import 'package:flutter/material.dart';
 import '../../../widgets/big_button.dart';
 import '../../../widgets/special_button.dart';
 import '../../../widgets/kTextField.dart';
-import '../signup/sign_up.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _LoginState createState() => _LoginState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _LoginState extends State<Login> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -25,15 +24,23 @@ class _LoginState extends State<Login> {
             height: 50,
           ),
           const Text(
-            "Sign in",
+            "Create Account",
             style: TextStyle(
               fontSize: 20,
               color: Colors.black,
             ),
           ),
           const Text(
-            " HI!! Welcome back you have been missed",
+            "Fill your infomation below or register with your social account",
             style: TextStyle(fontSize: 15, color: Color(0xD89E9E9E)),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          const KtextField(
+            littleLabel: 'Name',
+            littleHint: 'John Doe',
+            obscureText: false,
           ),
           const SizedBox(
             height: 30,
@@ -166,8 +173,6 @@ class _LoginState extends State<Login> {
                   recognizer: TapGestureRecognizer()
                     ..onTap = () {
                       print('Sign in');
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SignUp()));
                       // Add your navigation logic here or perform any other action.
                     },
                 ),
