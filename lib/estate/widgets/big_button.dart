@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 class BigButton extends StatelessWidget {
-  Text label;
-  Function goTo;
-  Color bgColor;
+  final Text label;
+  final Function() goTo;
+  final Color bgColor;
 
-  BigButton(
-      {super.key,
-      required this.label,
-      required this.goTo,
-      required this.bgColor});
+  BigButton({
+    Key? key,
+    required this.label,
+    required this.goTo,
+    required this.bgColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,10 @@ class BigButton extends StatelessWidget {
         color: bgColor,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: ElevatedButton(onPressed: goTo(), child: label),
+      child: ElevatedButton(
+        onPressed: goTo,
+        child: label,
+      ),
     );
   }
 }

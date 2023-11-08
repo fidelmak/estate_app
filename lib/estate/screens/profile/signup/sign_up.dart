@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../widgets/big_button.dart';
 import '../../../widgets/special_button.dart';
 import '../../../widgets/kTextField.dart';
+import 'verify_signup.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -31,8 +32,12 @@ class _SignUpState extends State<SignUp> {
             ),
           ),
           const Text(
+            textAlign: TextAlign.center,
             "Fill your infomation below or register \n with your social account",
-            style: TextStyle(fontSize: 15, color: Color(0xD89E9E9E)),
+            style: TextStyle(
+              fontSize: 15,
+              color: Color(0xD89E9E9E),
+            ),
           ),
           const SizedBox(
             height: 30,
@@ -61,34 +66,51 @@ class _SignUpState extends State<SignUp> {
           const SizedBox(
             height: 10,
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+            SizedBox(
+              width: 100,
+            ),
+            Icon(
+              Icons.check_box_rounded,
+              color: Colors.blue,
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text("Agree with"),
             TextButton(
                 onPressed: () {},
-                child: const Text("forget password",
+                child: const Text("terms & condition",
                     style: TextStyle(
                       color: Colors.blue,
                       decoration: TextDecoration.underline,
                     ))),
-            SizedBox(
-              width: 90,
-            ),
           ]),
           SizedBox(
             height: 10,
           ),
-          BigButton(
-            label: Text(
-              "Sign-in",
-              style: TextStyle(color: Colors.white),
+          TextButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => VerifySignUp()));
+            },
+            child: BigButton(
+              label: Text(
+                "Sign-up",
+                style: TextStyle(color: Colors.white),
+              ),
+              goTo: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => VerifySignUp()));
+              },
+              bgColor: Colors.black,
             ),
-            goTo: () {},
-            bgColor: Colors.black,
           ),
           SizedBox(
             height: 20,
           ),
           Text(
-            " or Sign in with ",
+            " or Sign up with ",
             style: TextStyle(
               fontSize: 11,
               color: Colors.black.withOpacity(0.5),
@@ -161,11 +183,11 @@ class _SignUpState extends State<SignUp> {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: "Don't have an account ? ",
+                  text: "Already have an account ? ",
                   style: TextStyle(color: Colors.black),
                 ),
                 TextSpan(
-                  text: 'sign-up ',
+                  text: 'login ',
                   style: TextStyle(
                     color: Colors.blue,
                     decoration: TextDecoration.underline,
@@ -178,7 +200,7 @@ class _SignUpState extends State<SignUp> {
                 ),
               ],
             ),
-          )
+          ),
         ]),
       ),
     );
