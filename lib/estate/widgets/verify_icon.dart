@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class VerifyIcon extends StatelessWidget {
   final obscureText;
@@ -16,15 +17,20 @@ class VerifyIcon extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 250, 249, 249),
-            borderRadius: BorderRadius.circular(10), // Set the border radius
+            borderRadius: BorderRadius.circular(5), // Set the border radius
             border: Border.all(
               color: Colors.black, // Border color
               width: .3, // Border width
             ),
           ),
-          width: 30,
+          width: 70,
           height: 30,
           child: TextField(
+            keyboardType: TextInputType.number,
+            inputFormatters: [
+              //only numeric keyboard.
+              LengthLimitingTextInputFormatter(1), //only 6 digit
+            ],
             obscureText: obscureText,
             cursorHeight: 20,
             cursorColor: Colors.black, // Set the cursor color

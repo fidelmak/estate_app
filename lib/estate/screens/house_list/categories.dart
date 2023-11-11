@@ -35,24 +35,15 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('House List'),
-      ),
-      body: House.isNotEmpty
-          ? Padding(
-              padding: const EdgeInsets.all(36.0),
-              child: Column(children: [
+    return Material(
+        child: Scaffold(
+            appBar: AppBar(),
+            body: ListView(
+              children: [
                 Container(
                   child: Text("hi"),
                 )
-              ]))
-          : Center(
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text("Empty"),
-              ),
-            ),
-    );
+              ],
+            )));
   }
 }
