@@ -35,15 +35,33 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
-    return Material(
-        child: Scaffold(
-            appBar: AppBar(),
-            body: ListView(
-              children: [
-                Container(
-                  child: Text("hi"),
-                )
-              ],
-            )));
+    return Scaffold(
+        body: Container(
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: [
+            Text('location'),
+            ListTile(
+              leading: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.location_on),
+                  Text('New York'),
+                  Icon(Icons.keyboard_arrow_down),
+                ],
+              ),
+              trailing: Icon(Icons.notifications),
+            ),
+            Center(
+              child: Container(
+                child: Text("hi"),
+              ),
+            )
+          ],
+        ),
+      ),
+    ));
   }
 }
