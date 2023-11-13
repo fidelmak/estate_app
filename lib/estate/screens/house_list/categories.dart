@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../widgets/bottom_nav.dart';
+import '../location_screen/house_listing.dart';
+
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({super.key});
 
@@ -24,6 +27,8 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         title: Center(
@@ -111,14 +116,32 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 ],
               ),
             ),
-            gradientCard(
-              icon: Icons.church_outlined,
-              text: "Nature's Light ",
-              image: AssetImage(
-                "assets/images/grtwall.jpg",
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => calResult(
+                              bmiResult: '34',
+                              resultText: 'okay you are right',
+                              interpretation: 'you are good to go',
+                            )));
+              },
+              child: Container(
+                width: screenWidth,
+                child: gradientCard(
+                  onPress: () {
+                    print("view");
+                  },
+                  icon: Icons.church_outlined,
+                  text: "Nature's Light ",
+                  image: AssetImage(
+                    "assets/house/h1.jpeg",
+                  ),
+                  // width: 60,
+                  // height: 170,
+                ),
               ),
-              // width: 60,
-              // height: 170,
             ),
             Container(
               //margin: EdgeInsets.symmetric(vertical: 8, horizontal: 0),
@@ -126,27 +149,30 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        width: 180,
+                        width: screenWidth * 0.5,
                         child: gradientCard(
+                          onPress: () {},
                           icon: Icons.masks_outlined,
                           text: "Cultural",
                           image: AssetImage(
-                            "assets/images/cuba.jpeg",
+                            "assets/house/h5.jpeg",
                           ),
 
                           // height: 200,
                         ),
                       ),
                       Container(
-                        width: 180,
+                        width: screenWidth * 0.5,
                         height: 240,
                         child: gradientCard(
+                          onPress: () {},
                           icon: Icons.mosque_outlined,
                           text: "Popularity",
                           image: AssetImage(
-                            "assets/images/greek.jpeg",
+                            "assets/house/h4.jpeg",
                           ),
                         ),
                       ),
@@ -155,25 +181,27 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                   Column(
                     children: [
                       Container(
-                        width: 180,
+                        width: screenWidth * 0.5,
                         height: 240,
                         child: gradientCard(
+                          onPress: () {},
                           icon: Icons.church_outlined,
                           text: "Modern Life",
                           image: AssetImage(
-                            "assets/images/city.jpeg",
+                            "assets/house/h3.jpeg",
                           ),
                           // width: 230,
                           // height: 200,
                         ),
                       ),
                       Container(
-                        width: 180,
+                        width: screenWidth * 0.5,
                         child: gradientCard(
+                          onPress: () {},
                           icon: Icons.wb_sunny_outlined,
                           text: "Sun Sand ",
                           image: AssetImage(
-                            "assets/images/mercury.jpeg",
+                            "assets/house/h2.jpeg",
                           ),
                           // width: 230,
                           // height: 200,
@@ -184,37 +212,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 ],
               ),
             ),
-            Expanded(
-                child: Container(
-              height: 60,
-              color: Color.fromARGB(
-                  255, 27, 26, 26), // Background color of the footer
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(
-                    Icons.home,
-                    color: Colors.white, // White color
-                    // Add other properties as needed, e.g., size
-                  ),
-                  Icon(
-                    Icons.explore,
-                    color: Colors.white, // White color
-                    // Add other properties as needed, e.g., size
-                  ),
-                  Icon(
-                    Icons.message_outlined,
-                    color: Colors.white, // White color
-                    // Add other properties as needed, e.g., size
-                  ),
-                  Icon(
-                    Icons.verified_user_outlined,
-                    color: Colors.white, // White color
-                    // Add other properties as needed, e.g., size
-                  ),
-                ],
-              ),
-            ))
+            BottomNav()
           ],
         ),
       ),
@@ -227,9 +225,9 @@ class gradientCard extends StatelessWidget {
     required this.icon,
     required this.text,
     required this.image,
-    // required this.width,
-    // required this.height
+    required this.onPress,
   });
+  final Function onPress;
   final IconData icon;
   final text;
   final AssetImage image;
@@ -258,8 +256,9 @@ class gradientCard extends StatelessWidget {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                Color.fromARGB(255, 245, 79, 2).withOpacity(0.8),
-                Color.fromARGB(255, 73, 2, 80).withOpacity(0.8),
+                Color.fromARGB(255, 245, 244, 243).withOpacity(0.2),
+                Color.fromARGB(255, 73, 2, 80).withOpacity(0.2),
+                Colors.black.withOpacity(0.5),
               ],
             )),
             child: Padding(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
+import '../../widgets/bottom_nav.dart';
 import '../../widgets/card.dart';
 
 //import 'card.dart';
@@ -17,66 +18,21 @@ class UserDetails extends StatefulWidget {
 class _UserDetailsState extends State<UserDetails> {
   int _page = 0;
   bool _isHovered = false;
-  GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+  //GlobalKey _bottomNavigationKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        key: _bottomNavigationKey,
-        index: 0,
-        height: 60.0,
-        items: <Widget>[
-          Icon(
-            Icons.home,
-            size: 30,
-            color: _isHovered ? AppColors.primaryColor : AppColors.textColor,
-          ),
-          Icon(
-            Icons.people,
-            size: 30,
-            color: _isHovered ? AppColors.primaryColor : AppColors.textColor,
-          ),
-          Icon(
-            Icons.person,
-            size: 30,
-            color: _isHovered ? AppColors.primaryColor : AppColors.textColor,
-          ),
-          Icon(
-            Icons.inbox,
-            size: 30,
-            color: _isHovered ? AppColors.primaryColor : AppColors.textColor,
-          ),
-          Icon(
-            Icons.chat,
-            size: 30,
-            color: _isHovered ? AppColors.primaryColor : AppColors.textColor,
-          ),
-        ],
-        color: Colors.white,
-        buttonBackgroundColor: Colors.white,
-        backgroundColor: AppColors.primaryColor,
-        animationCurve: Curves.easeInOut,
-        animationDuration: Duration(milliseconds: 600),
-        onTap: (index) {
-          //_isHovered = true;
-          //index = _isHovered as int;
-          setState(() {
-            _page = index;
-            //_isHovered = true;
-          });
-        },
-        letIndexChange: (index) => true,
-      ),
+      bottomNavigationBar: const BottomNav(),
       backgroundColor: AppColors.backGround,
       appBar: AppBar(
-        toolbarHeight: 90,
+        toolbarHeight: 60,
         title: Center(
           child: Text(
             'User Account',
             style: TextStyle(color: Colors.white),
           ),
         ),
-        backgroundColor: AppColors.primaryColor,
+        backgroundColor: AppColors.darkColor,
       ),
       body: SafeArea(
           child: ListView(

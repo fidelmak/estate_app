@@ -46,14 +46,17 @@ class CreditCardWidget extends StatelessWidget {
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
-                backgroundImage: AssetImage('images/img1.jpg'),
+                backgroundImage: AssetImage('images/home.jpeg'),
               ),
               SizedBox(
                 height: 24,
               ),
               Text(
                 "Update your Profile",
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16.0),
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16.0,
+                    color: Colors.white),
               ),
             ],
           ),
@@ -71,7 +74,7 @@ class CreditCardWidget extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       'Anil Mathur',
-                      style: TextStyle(fontSize: 18.0),
+                      style: TextStyle(fontSize: 18.0, color: Colors.white),
                     ),
                     SizedBox(width: 6),
                     Icon(
@@ -101,7 +104,7 @@ class CreditCardWidget extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     'ID:1234567AE,',
-                    style: TextStyle(fontSize: 6.0),
+                    style: TextStyle(fontSize: 6.0, color: Colors.white),
                   ),
                 ),
               ),
@@ -110,7 +113,10 @@ class CreditCardWidget extends StatelessWidget {
               ),
               Text(
                 'card.expiryDate,',
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 8.0),
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 8.0,
+                    color: Colors.white),
               ),
               SizedBox(
                 height: 8,
@@ -120,8 +126,10 @@ class CreditCardWidget extends StatelessWidget {
                 children: [
                   Text(
                     'Account-Free',
-                    style:
-                        TextStyle(fontWeight: FontWeight.w400, fontSize: 8.0),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 8.0,
+                        color: Colors.white),
                   ),
                   SizedBox(
                     width: 2,
@@ -136,7 +144,7 @@ class CreditCardWidget extends StatelessWidget {
                       onPressed: () {},
                       child: Text(
                         'Upgrade Now ',
-                        style: TextStyle(fontSize: 8.0),
+                        style: TextStyle(fontSize: 8.0, color: Colors.white),
                       ),
                     ),
                   ),
@@ -147,7 +155,10 @@ class CreditCardWidget extends StatelessWidget {
               ),
               Text(
                 'Complete Profile 50%',
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 12.0),
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12.0,
+                    color: Colors.white),
               ),
               SizedBox(
                 height: 8,
