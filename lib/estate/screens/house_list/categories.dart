@@ -43,7 +43,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Explore",
+                    "Available Houses",
                     style: TextStyle(color: Colors.grey),
                   ),
                 ),
@@ -91,7 +91,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                             });
                           },
                           child: Text(
-                            "Discover",
+                            "Duplex",
                             style: TextStyle(
                               color: SelectedChoice == Choice.Discover
                                   ? Colors.grey
@@ -106,7 +106,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                             });
                           },
                           child: Text(
-                            "Activities",
+                            "Bungalow",
                             style: TextStyle(
                               color: SelectedChoice == Choice.Discover
                                   ? Colors.red
@@ -134,7 +134,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                     print("view");
                   },
                   icon: Icons.church_outlined,
-                  text: "Nature's Light ",
+                  text: "mansion ",
                   image: AssetImage(
                     "assets/house/h1.jpeg",
                   ),
@@ -156,7 +156,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                         child: gradientCard(
                           onPress: () {},
                           icon: Icons.masks_outlined,
-                          text: "Cultural",
+                          text: "Duplex Delight",
                           image: AssetImage(
                             "assets/house/h5.jpeg",
                           ),
@@ -170,7 +170,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                         child: gradientCard(
                           onPress: () {},
                           icon: Icons.mosque_outlined,
-                          text: "Popularity",
+                          text: "Castle Crest",
                           image: AssetImage(
                             "assets/house/h4.jpeg",
                           ),
@@ -186,7 +186,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                         child: gradientCard(
                           onPress: () {},
                           icon: Icons.church_outlined,
-                          text: "Modern Life",
+                          text: "Townhouse Tranquility",
                           image: AssetImage(
                             "assets/house/h3.jpeg",
                           ),
@@ -199,7 +199,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                         child: gradientCard(
                           onPress: () {},
                           icon: Icons.wb_sunny_outlined,
-                          text: "Sun Sand ",
+                          text: "Villa Vista ",
                           image: AssetImage(
                             "assets/house/h2.jpeg",
                           ),

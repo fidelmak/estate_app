@@ -35,6 +35,6 @@ class MyApp extends StatelessWidget {
         routes: routes,
         theme: theme,
         home:
-            Login()); //Home()); //const Estate()); //Home()); //home()); //const CategoriesScreen());
+            Home()); //Home()); //const Estate()); //Home()); //home()); //const CategoriesScreen());
   }
 }

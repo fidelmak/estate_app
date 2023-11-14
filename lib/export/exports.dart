@@ -1,0 +1,10 @@
+export 'package:estate_app/estate/screens/welcome/welcome.dart';
+export 'package:estate_app/practise/data/dummy.dart';
+export 'package:flutter/material.dart';
+export 'package:estate_app/estate/routes/routes.dart';
+export 'package:google_fonts/google_fonts.dart';
+export 'package:estate_app/estate/screens/profile/login/login.dart';
+export 'package:estate_app/estate/screens/splash/homepage.dart';
+export 'package:estate_app/practise/SCREENS/meals.dart';
+export 'package:estate_app/estate/screens/house_list/categories.dart';
+export 'package:estate_app/practise/SCREENS/intro_app.dart';

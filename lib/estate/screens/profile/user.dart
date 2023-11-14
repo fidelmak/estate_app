@@ -4,6 +4,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 import '../../widgets/bottom_nav.dart';
 import '../../widgets/card.dart';
+import '../house_list/categories.dart';
 
 //import 'card.dart';
 
@@ -16,8 +17,8 @@ class UserDetails extends StatefulWidget {
 }
 
 class _UserDetailsState extends State<UserDetails> {
-  int _page = 0;
-  bool _isHovered = false;
+  // int _page = 0;
+  // bool _isHovered = false;
   //GlobalKey _bottomNavigationKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -41,13 +42,19 @@ class _UserDetailsState extends State<UserDetails> {
             height: null,
           ),
           CreditCardWidget(),
-          myCardTag(
-              'Get 3 Times More Responses',
-              Icon(
-                Icons.image,
-                color: AppColors.primaryColor,
-              ),
-              'upload your photos'),
+          TextButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CategoriesScreen()));
+            },
+            child: myCardTag(
+                'Get assess to house listing ',
+                Icon(
+                  Icons.image,
+                  color: AppColors.primaryColor,
+                ),
+                'upload your photos'),
+          ),
           myCardTag(
               'Partner Expectation',
               Icon(

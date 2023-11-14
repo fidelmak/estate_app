@@ -7,6 +7,7 @@ import '../../../widgets/kTextField.dart';
 import '../../../widgets/verify_icon.dart';
 import '../../house_list/categories.dart';
 import '../signup/sign_up.dart';
+import '../user.dart';
 
 class VerifySignUp extends StatefulWidget {
   const VerifySignUp({Key? key}) : super(key: key);
@@ -118,7 +119,7 @@ class _VerifySignUpState extends State<VerifySignUp> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CategoriesScreen()));
+                              builder: (context) => UserDetails()));
                     },
                     bgColor: Colors.black,
                   ),
