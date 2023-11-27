@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+//import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 import '../../widgets/bottom_nav.dart';
 import '../../widgets/card.dart';

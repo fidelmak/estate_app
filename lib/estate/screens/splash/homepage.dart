@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants/colors.dart';
-import '../../routes/routes.dart';
+//import '../../routes/routes.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-        backgroundColor: EstateColors.primary,
+        backgroundColor: EstateColors.icox,
         body: SafeArea(
             child: Center(
           child: Column(
@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
               ),
               SizedBox(height: 16),
               const Text(
-                'Re - Estate',
+                'Real - Estate',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
